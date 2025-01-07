@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CrushDetector : MonoBehaviour
 {
     [SerializeField] float reloadDelay = 2.0f;
+    [SerializeField] ParticleSystem crashEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class CrushDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            crashEffect.Play();
+
             Debug.Log("You hit the ground!");
 
             Invoke(nameof(ReloadScene), reloadDelay);
