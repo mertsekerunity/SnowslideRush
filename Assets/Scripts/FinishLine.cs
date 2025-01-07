@@ -7,6 +7,7 @@ public class FinishLine : MonoBehaviour
 {
     [SerializeField] float reloadDelay = 2.0f;
     [SerializeField] ParticleSystem finishEffect;
+    [SerializeField] AudioClip finishSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class FinishLine : MonoBehaviour
 
             finishEffect.Play();
 
-            GetComponent<AudioSource>().Play();
+            MakeFinishSound();
 
             Invoke(nameof(LoadNextScene), reloadDelay);     
         }
@@ -45,5 +46,12 @@ public class FinishLine : MonoBehaviour
         {
             Debug.Log("No more scenes to load!");
         }
+    }
+
+    void MakeFinishSound()
+    {
+        AudioSource audioSource = FindObjectOfType<AudioSource>();
+        audioSource.clip = finishSound;
+        audioSource.Play();
     }
 }

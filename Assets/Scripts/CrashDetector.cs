@@ -27,11 +27,11 @@ public class CrushDetector : MonoBehaviour
         {
             crashEffect.Play();
 
-            GetComponent<AudioSource>().PlayOneShot(crashSound);
-
             FindObjectOfType<PlayerController>().DisableControls();
 
             Debug.Log("You hit the ground!");
+
+            MakeCrashSound();
 
             Invoke(nameof(ReloadScene), reloadDelay);
         }
@@ -40,5 +40,13 @@ public class CrushDetector : MonoBehaviour
     void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void MakeCrashSound()
+    {
+        AudioSource audioSource = FindObjectOfType<AudioSource>();
+        audioSource.clip = crashSound;
+        audioSource.Play();
+
     }
 }
