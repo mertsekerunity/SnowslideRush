@@ -23,6 +23,5 @@ public class PlayerController : MonoBehaviour
         {
             rb2d.AddTorque(-torqueValue); //right direction
         }
-        //Debug.Log(rb2d.angularVelocity);
     }
 }
