@@ -382,21 +382,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 808924242625191202, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1996869029975694036, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
-      propertyPath: boostSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1996869029975694036, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
-      propertyPath: normalSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2724274830544878952, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
       propertyPath: m_Name
       value: Snowboarder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762657818582111209, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+      propertyPath: looping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7720776563786651682, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
       propertyPath: m_LocalPosition.x
@@ -404,7 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7720776563786651682, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.14
+      value: 20.9
       objectReference: {fileID: 0}
     - target: {fileID: 7720776563786651682, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
       propertyPath: m_LocalPosition.z
@@ -438,10 +430,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8552915378420853731, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2724274830544878952, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 994580486}
   m_SourcePrefab: {fileID: 100100000, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
 --- !u!4 &270751632 stripped
 Transform:
@@ -681,13 +680,18 @@ Transform:
   m_GameObject: {fileID: 370029129}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100.36044, y: 20.14, z: -10}
+  m_LocalPosition: {x: -100.36044, y: 20.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 782447251}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &390584260 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5762657818582111209, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+  m_PrefabInstance: {fileID: 270751631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &449686984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,7 +2002,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100.36044, y: 20.14, z: -10}
+  m_LocalPosition: {x: -100.36044, y: 20.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2599,6 +2603,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &994580480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2724274830544878952, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+  m_PrefabInstance: {fileID: 270751631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &994580486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994580480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a127f2ec9b6a2e647b3e93ba38358a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowTrail: {fileID: 390584260}
 --- !u!1 &1074388982
 GameObject:
   m_ObjectHideFlags: 0
