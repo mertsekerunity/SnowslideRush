@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reloadDelay: 1
   crashEffect: {fileID: 8552915378420853731}
+  crashSound: {fileID: 8300000, guid: 56713944d92dcdd48b527d4283c04396, type: 3}
 --- !u!58 &2518453931335589553
 CircleCollider2D:
   m_ObjectHideFlags: 0

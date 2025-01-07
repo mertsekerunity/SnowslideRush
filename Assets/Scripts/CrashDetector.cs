@@ -8,6 +8,7 @@ public class CrushDetector : MonoBehaviour
 {
     [SerializeField] float reloadDelay = 2.0f;
     [SerializeField] ParticleSystem crashEffect;
+    [SerializeField] AudioClip crashSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,8 @@ public class CrushDetector : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             crashEffect.Play();
+
+            GetComponent<AudioSource>().PlayOneShot(crashSound);
 
             Debug.Log("You hit the ground!");
 
