@@ -29,6 +29,8 @@ public class CrushDetector : MonoBehaviour
 
             GetComponent<AudioSource>().PlayOneShot(crashSound);
 
+            FindObjectOfType<PlayerController>().DisableControls();
+
             Debug.Log("You hit the ground!");
 
             Invoke(nameof(ReloadScene), reloadDelay);
