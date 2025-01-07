@@ -382,6 +382,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 808924242625191202, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996869029975694036, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+      propertyPath: boostSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996869029975694036, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
+      propertyPath: normalSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2724274830544878952, guid: 298e30cf0772f0449b8eee741bd88155, type: 3}
       propertyPath: m_Name
       value: Snowboarder
