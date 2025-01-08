@@ -2967,6 +2967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleToSpawn:
   - {fileID: 8299052205744336339, guid: 70bb80c917c05df4893061155461a891, type: 3}
+  - {fileID: 3497001499995578610, guid: 47ab20b4da1ae80489c8cab0c0af889b, type: 3}
   spawnDelay: 2
 --- !u!4 &1213122052
 Transform:

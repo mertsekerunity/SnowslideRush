@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SnowTrail : MonoBehaviour
 {
-    [SerializeField] ParticleSystem snowTrail;
+    //[SerializeField] ParticleSystem snowTrail;
+    public ParticleSystem snowTrail;
 
     // Start is called before the first frame update
     void Start()
